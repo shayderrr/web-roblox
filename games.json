@@ -1,1 +1,107 @@
 
+{
+  "project": "Web Roblox",
+  "base_cdn": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/",
+  "games": [
+    {
+      "title": "99 Nights in the Forest",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/cl99nightsitf.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/99itf.jpeg"
+    },
+    {
+      "title": "Steal a Brainrot Again",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clbrainrot.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/stealabrainrotagain.jpeg"
+    },
+    {
+      "title": "Climb for Brainrots",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clclimbforbrainrots.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/climbforbrainrots.jpeg"
+    },
+    {
+      "title": "Doblox",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/cldoblox.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/doblox.jpeg"
+    },
+    {
+      "title": "Grow a Garden",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clgrowagarden.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/growagarden.jpeg"
+    },
+    {
+      "title": "Growden.io",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clgrowdenio.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/growdenio.jpeg"
+    },
+    {
+      "title": "Lumber Obby",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/cllumberobby.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/lumber.jpeg"
+    },
+    {
+      "title": "Night Cat Survival",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clnightcatsurvival.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/nightcat.jpeg"
+    },
+    {
+      "title": "Ninja Obby Parkour",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clninjaobbyparkor.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/ninja.jpeg"
+    },
+    {
+      "title": "Obby: 99% Will Lose",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clobby-99-will-lose.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/obby99.jpeg"
+    },
+    {
+      "title": "Obby: +1 Jump Per Click",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clobby1jumpperclick.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/obbyplus1.jpeg"
+    },
+    {
+      "title": "Bike Obby",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clobbybike.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/bike.jpeg"
+    },
+    {
+      "title": "Cart Obby",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clobbycart.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/cart.jpeg"
+    },
+    {
+      "title": "Obby With Friends",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clobbyfriends.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/obbywithfriends.jpeg"
+    },
+    {
+      "title": "Only Up Obby",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clobbyonlyup.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/onlyup.jpeg"
+    },
+    {
+      "title": "Rainbow Tower Obby",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clobbyrainbowtower.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/rainbowtower.jpeg"
+    },
+    {
+      "title": "Sab Duel",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clsabduel.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/sabduel.jpeg"
+    },
+    {
+      "title": "Snowboard Obby",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clsnowboardobby.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/snowboard.jpeg"
+    },
+    {
+      "title": "Steal a Brainrot",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clstealbrainrot.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/stealabrainrot.jpeg"
+    },
+    {
+      "title": "Sab v2 idk",
+      "url": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/html/clsupitdept.html",
+      "cover": "https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/covers/supitdept.jpeg"
+    }
+  ]
+}
