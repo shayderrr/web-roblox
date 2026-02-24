@@ -1,0 +1,194 @@
+<!-- to add your own games to go https://github.com/shayderrr/web-roblox/tree/main -->
+<!-- shxyder -->
+<!-- ultimate game stash file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #191B1D;
+            --nav-color: #212325;
+            --text-color: #FFFFFF;
+            --text-secondary: #BDBCBC;
+            --card-hover: #393B3D;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        
+        nav {
+            background-color: var(--nav-color);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #393B3D;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: -1px;
+            cursor: pointer;
+        }
+
+      
+        .container {
+            margin-top: 80px;
+            padding: 20px 5%;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        
+        #game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 15px;
+        }
+
+        .game-card {
+            background: transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.1s ease;
+            padding: 8px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .game-card:hover {
+            background-color: var(--card-hover);
+        }
+
+        .thumbnail-container {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background-color: #393B3D;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-title {
+            font-size: 16px;
+            font-weight: 500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #loader {
+            text-align: center;
+            padding: 50px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">ROBLOX</div>
+    </nav>
+
+    <div class="container">
+        <h1>Experiences</h1>
+        <div id="loader">Loading...</div>
+        <div id="game-grid"></div>
+    </div>
+
+    <script>
+        const JSON_URL = 'https://cdn.jsdelivr.net/gh/shayderrr/web-roblox@main/games.json';
+
+       
+        async function launchGame(gameUrl, gameTitle) {
+           
+            const newWin = window.open('', '_blank');
+            newWin.document.write(`<html><head><title>Loading ${gameTitle}...</title></head><body style="background:#000;color:#fff;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;"><h1>Loading Experience...</h1></body></html>`);
+
+            try {
+               
+                const response = await fetch(gameUrl);
+                const htmlContent = await response.text();
+
+               
+                const basePath = gameUrl.substring(0, gameUrl.lastIndexOf('/') + 1);
+
+               
+                newWin.document.open();
+                newWin.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <base href="${basePath}">
+                        <title>${gameTitle}</title>
+                    </head>
+                    <body>
+                        ${htmlContent}
+                    </body>
+                    </html>
+                `);
+                newWin.document.close();
+            } catch (err) {
+                newWin.document.body.innerHTML = "<h1>Error loading game.</h1>";
+                console.error(err);
+            }
+        }
+
+        async function loadGames() {
+            try {
+                const response = await fetch(JSON_URL);
+                const data = await response.json();
+                
+                const grid = document.getElementById('game-grid');
+                document.getElementById('loader').style.display = 'none';
+
+                data.games.forEach(game => {
+                    const card = document.createElement('div');
+                    card.className = 'game-card';
+                    
+                    
+                    card.onclick = () => launchGame(game.url, game.title);
+
+                    card.innerHTML = `
+                        <div class="thumbnail-container">
+                            <img src="${game.cover}" alt="${game.title}">
+                        </div>
+                        <div class="game-title">${game.title}</div>
+                    `;
+
+                    grid.appendChild(card);
+                });
+            } catch (error) {
+                document.getElementById('loader').innerText = 'Failed to load games.';
+            }
+        }
+
+        loadGames();
+    </script>
+</body>
+</html>
